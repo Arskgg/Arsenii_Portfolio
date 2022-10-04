@@ -8,7 +8,6 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import { isMobile } from "react-device-detect";
 
 const Garage = () => {
   const [sliderX, setSliderX] = useState(0);
