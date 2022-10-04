@@ -1,0 +1,48 @@
+@import "../../styles/breakpoints.scss";
+
+.footer {
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  .divider {
+    margin-bottom: 0.3rem;
+  }
+
+  .list {
+    display: flex;
+    gap: 2rem;
+  }
+  .item_icon {
+    cursor: pointer;
+
+    a {
+      display: flex;
+    }
+
+    svg {
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+      font-size: 1.7rem;
+    }
+
+    svg:hover {
+      color: var(--primary-color);
+      background-color: var(--secondary-color);
+    }
+  }
+
+  .item_icon:first-child svg {
+    border-radius: 50%;
+  }
+  .info {
+    font-size: 0.8rem;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+}

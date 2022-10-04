@@ -1,0 +1,168 @@
+@import ".././../styles/breakpoints.scss";
+
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  backdrop-filter: blur(5px);
+  display: block;
+}
+
+.nav_hidden {
+  display: none;
+}
+
+.container {
+  height: 70px;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include md {
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0.5rem 0;
+  }
+
+  .name {
+    font-weight: 300;
+    font-size: 2rem;
+    cursor: pointer;
+    text-overflow: ellipsis;
+
+    @include lg {
+      font-size: 1.5rem;
+    }
+
+    @include md {
+      font-size: 0.8rem;
+    }
+  }
+
+  .menu {
+  }
+  .list {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include xl {
+      gap: 1.5rem;
+    }
+
+    @include md {
+      gap: 2rem;
+    }
+
+    @include xs {
+      gap: 1rem;
+    }
+  }
+
+  .item_project {
+    display: none;
+    text-transform: uppercase;
+    @include md {
+      display: block;
+    }
+  }
+
+  .item {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    transition: scale 0.3s ease-out;
+
+    @include lg {
+      font-size: 0.9rem;
+    }
+
+    @include xxs {
+      font-size: 0.7rem;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      background-color: var(--secondary-color);
+      transition: transform 0.3s ease-out;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      transform-origin: top left;
+    }
+    &::after {
+      top: 100%;
+      right: 0;
+      transform-origin: bottom right;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: top right;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &__selected::before,
+    &__selected::after {
+      transform: scaleX(1);
+    }
+  }
+
+  .icons_container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include md {
+      display: none;
+    }
+
+    @include lg {
+      gap: 0.5rem;
+    }
+    @include xl {
+      gap: 0.7rem;
+    }
+
+    .item_icon {
+      cursor: pointer;
+
+      a {
+        display: flex;
+      }
+
+      svg {
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+      }
+
+      svg:hover {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+      }
+    }
+
+    .item_icon:first-child svg {
+      border-radius: 50%;
+    }
+  }
+}

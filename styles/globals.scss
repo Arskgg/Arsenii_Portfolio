@@ -1,0 +1,120 @@
+:root {
+  --primary-color: #f4ddbb;
+  --secondary-color: #191919;
+  --primary-rgb: 244, 221, 187;
+  --secondary-rgb: 25, 25, 25;
+  --resize-title: clamp(2rem, 8vw, 8rem);
+  --resize-subtitle: clamp(1rem, 1vw, 3.5rem);
+  --hover-color: #c68f29;
+  --beige-color: #f4ddbb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
+
+input:focus {
+  outline: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+#__next {
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(111, 111, 111);
+  scale: 1.1;
+}

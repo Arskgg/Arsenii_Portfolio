@@ -1,0 +1,17 @@
+@import "../styles/breakpoints.scss";
+
+.main {
+  padding: 0 3%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+
+  @include lg {
+    &::-webkit-scrollbar {
+      display: none;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+}

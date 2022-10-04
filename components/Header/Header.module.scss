@@ -1,0 +1,94 @@
+@import "../../styles/breakpoints.scss";
+
+.header {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top_divider {
+    margin-top: 70px;
+  }
+
+  .bottom_divider {
+    margin-bottom: 70px;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .discription {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    .title {
+      font-family: "Source Sans Pro";
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: clamp(2rem, 15vw, 10rem);
+      line-height: clamp(1rem, 8vw, 5rem);
+    }
+    .subtitle {
+      margin-top: 3rem;
+      font-weight: 300;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    .btns {
+      margin-top: 2.5rem;
+    }
+  }
+  .image_wrapper {
+    padding: 0 0 50% 50%;
+    right: -10vh;
+    position: absolute;
+    top: -10vh;
+    animation: floater 3s infinite;
+    transition: ease-in-out;
+
+    @media (max-width: 2500px) {
+      right: -25vh;
+    }
+
+    @include lg {
+      padding: 0 0 50% 50%;
+      right: -10vh;
+      top: 0;
+    }
+
+    @include sm {
+      padding: 0 0 65% 65%;
+    }
+
+    @include xs {
+      padding: 0 0 85% 85%;
+    }
+
+    span {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+@keyframes floater {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
