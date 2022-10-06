@@ -7,7 +7,7 @@ import ContactBtns from "../ContactBtns";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Divider className={styles.divider} />
+      {/* <Divider className={styles.divider} /> */}
 
       <ul className={styles.list}>
         <li className={styles.item_icon}>

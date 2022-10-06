@@ -13,7 +13,9 @@ const ContactBtns = () => {
         <a href="mailto:arsenyper@gmail.com">Write Email</a>
       </div>
       <div className={styles.btn}>
-        <a href="#">Download CV</a>
+        <a href="/files/Arsenii_Perevertailo_CV.pdf" target="_blank" rel="noreferrer">
+          Download CV
+        </a>
       </div>
     </motion.div>
   );

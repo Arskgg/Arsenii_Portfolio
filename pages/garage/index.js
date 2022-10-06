@@ -91,14 +91,13 @@ const Garage = () => {
             <div className={styles.about}>
               <div className={styles.subtitle}>About</div>
               <div className={styles.description}>
-                Garage is Full Stack Web Application created by myself based on
-                React.js for client side and Node.js for Server with good
-                adaptive for mobile devices as on desktop. Users able to
-                register and login to make a post of unusual cars with their
-                tech specs and leave a comment under any post. Every user has
-                own profile with their followers and posts. Application also
-                contain search functionality among all post to help user find
-                certain car.
+                Garage is Full Stack Web Application based on React.js for
+                client side and Node.js for Server. App designed for desktop and
+                mobile devices. Users are able to register and login to make a
+                post of unusual cars with their tech specs and leave a comment
+                under any post. Every user has own profile with their followers
+                and posts. Application also contain search functionality among
+                all post to help user find certain car.
               </div>
             </div>
           </div>
