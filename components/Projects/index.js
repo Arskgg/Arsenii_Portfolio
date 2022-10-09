@@ -34,7 +34,7 @@ const Projects = () => {
                 </Link>
 
                 <a
-                  href="https://www.wit.edu.pl"
+                  href="https://social-garage.vercel.app/"
                   target="_blank"
                   rel="noreferrer"
                 >

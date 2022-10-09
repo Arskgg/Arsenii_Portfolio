@@ -83,7 +83,13 @@ const Garage = () => {
                   </li>
                 </ul>
                 <div className={styles.btn}>
-                  <a href="#">Live Page</a>
+                  <a
+                    href="https://social-garage.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Live Page
+                  </a>
                 </div>
               </div>
             </div>
