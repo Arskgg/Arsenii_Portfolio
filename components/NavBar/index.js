@@ -8,48 +8,27 @@ import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const NavBar = ({ section, scrollOnClickMenueItem, project }) => {
+const NavBar = ({ section, scrollOnClickMenueItem, project, sectionRefs }) => {
   const menuItems = ["Home", "Projects", "About"];
-  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
-
-  useEffect(() => {
-    setSelectedMenuItem(section);
-  }, [section]);
-
-  // const [showNavBar, setShowNavBar] = useState(true);
-  // const [lastScrollY, setLastScrollY] = useState(0);
-
-  // const controlNavbar = () => {
-  //   if (window.scrollY > 700 + lastScrollY) {
-  //     setSelectedMenuItem("About");
-  //   } else {
-  //     setShowNavBar(true);
-  //   }
-
-  //   setLastScrollY(window.scrollY);
-  // };
+  // const [selectedMenuItem, setSelectedMenuItem] = useState(null);
 
   // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     window.addEventListener("scroll", controlNavbar);
-
-  //     // cleanup function
-  //     return () => {
-  //       window.removeEventListener("scroll", controlNavbar);
-  //     };
-  //   }
-  // }, [lastScrollY]);
+  //   setSelectedMenuItem(section);
+  // }, [section]);
 
   return (
-    // <nav className={`${styles.nav} ${!showNavBar ? styles.nav_hidden : null}`}>
     <nav className={styles.nav}>
       <div className={styles.container}>
         <Link href="/">
-          <AnimatedTitle
-            className={styles.name}
-            text="ARSENII PEREVERTAILO"
-            onClick={() => !project && scrollOnClickMenueItem(0)}
-          />
+          <a>
+            <AnimatedTitle
+              className={styles.name}
+              text="ARSENII PEREVERTAILO"
+              onClick={() =>
+                !project && scrollOnClickMenueItem(sectionRefs[0], 0)
+              }
+            />
+          </a>
         </Link>
 
         <menu className={styles.menu}>
@@ -68,10 +47,11 @@ const NavBar = ({ section, scrollOnClickMenueItem, project }) => {
                 <li
                   value={i}
                   key={item}
-                  className={`${styles.item} ${
-                    i === selectedMenuItem && styles.item__selected
-                  }`}
-                  onClick={() => scrollOnClickMenueItem(i)}
+                  className={styles.item}
+                  onClick={() => scrollOnClickMenueItem(sectionRefs[i], i)}
+                  // className={`${styles.item} ${
+                  //   i === selectedMenuItem && styles.item__selected
+                  // }`}
                 >
                   {item}
                 </li>

@@ -1,3 +1,4 @@
+@import "../styles/breakpoints.scss";
 :root {
   --primary-color: #f4ddbb;
   --secondary-color: #191919;
@@ -69,12 +70,7 @@ body {
   font-family: "Source Code Pro", monospace;
   font-weight: 400;
   font-size: 1rem;
-  // overflow-x: hidden;
   scroll-behavior: smooth;
-  min-height: 100%;
-}
-
-#__next {
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,6 +96,10 @@ body {
 ::-webkit-scrollbar {
   width: 7px;
   border-radius: 1rem;
+
+  @include lg() {
+    display: none;
+  }
 }
 
 /* Track */

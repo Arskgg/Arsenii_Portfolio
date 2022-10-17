@@ -4,6 +4,9 @@ const useTheme = () => {
   const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem("darkTheme");
+    if (savedTheme) return setDarkTheme(savedTheme === "true");
+
     if (
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -41,7 +44,11 @@ const useTheme = () => {
     }
   }, [darkTheme]);
 
-  const changeTheme = () => setDarkTheme((prev) => !prev);
+  const changeTheme = () =>
+    setDarkTheme((prev) => {
+      localStorage.setItem("darkTheme", !prev);
+      return !prev;
+    });
 
   return { darkTheme, changeTheme };
 };

@@ -1,12 +1,8 @@
 @import "../../styles/breakpoints.scss";
 
 .about {
-  height: 100vh;
-  scroll-snap-align: start;
-  overflow: hidden;
-
   .slider_item {
-    scroll-snap-align: start;
+    min-height: 100vh;
     width: 80%;
     flex: 1 0 100%;
     display: flex;
@@ -147,6 +143,11 @@
             background-color: var(--secondary-color);
             top: calc(100% + 0.5rem);
             left: 0;
+            display: none;
+
+            @include xs {
+              display: block;
+            }
 
             @include xxs {
               display: none;
@@ -158,7 +159,7 @@
             position: relative;
             text-transform: uppercase;
             font-size: clamp(1rem, 2.5vw, 2.5rem);
-
+            text-align: center;
             &::before {
               content: "";
               position: absolute;
@@ -179,9 +180,11 @@
 
             @include xs {
               flex: 0 0 50%;
+              text-align: start;
             }
             @include xxs {
               flex: 0 1 50%;
+              text-align: center;
             }
           }
 

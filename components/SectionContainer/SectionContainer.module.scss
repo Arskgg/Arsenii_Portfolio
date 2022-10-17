@@ -1,64 +1,52 @@
 @import "../../styles/breakpoints.scss";
 
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  .top_divider {
-    margin-top: 70px;
-  }
-
-  .middle_divider {
-    box-shadow: var(--primary-color) 0px 10px 50px 50px;
-
-    z-index: 2;
-    @include xs {
-      box-shadow: none;
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  .bottom_divider {
-    margin-bottom: 70px;
-    box-shadow: var(--primary-color) 0px -10px 50px 50px;
-    z-index: 2;
-    @include md {
-      margin-bottom: 0.5rem;
-    }
-    @include xs {
-      box-shadow: none;
-    }
-  }
-
   .title {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(1rem, 5vw, 2.5rem);
-    text-transform: uppercase;
-    padding: 0.5rem 0;
-    z-index: 3;
-  }
+    position: sticky;
+    top: 0;
+    padding-top: 0.1px;
+    z-index: 5;
+    background-color: var(--primary-color);
+    box-shadow: 0 30px 80px 50px var(--primary-color);
 
-  .content_slider_container {
+    @include md {
+      box-shadow: 0 10px 30px 20px var(--primary-color);
+    }
+
+    .top_divider {
+      margin-top: 70px;
+    }
+
+    .middle_divider {
+      z-index: 2;
+    }
+
+    .bottom_divider {
+      margin-bottom: 70px;
+      z-index: 2;
+      @include md {
+        margin-bottom: 0.5rem;
+      }
+      @include xs {
+      }
+    }
+
+    &__name {
+      text-align: center;
+      font-weight: 700;
+      font-size: clamp(1rem, 5vw, 2.5rem);
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+    }
+  }
+  .content_container {
     flex: 1 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
 
     @include xs {
       margin-bottom: 0.5rem;
-    }
-
-    &::-webkit-scrollbar {
-      display: none;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
     }
   }
 }

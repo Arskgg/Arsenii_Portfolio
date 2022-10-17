@@ -1,134 +1,49 @@
 @import "../../styles/breakpoints.scss";
 
 .projects {
-  height: 100vh;
-  scroll-snap-align: start;
-  overflow: hidden;
-
   .slider_item {
-    scroll-snap-align: start;
     width: 90%;
-    flex: 1 0 100%;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     @include md {
       justify-content: center;
-    }
-
-    &__stripe_container {
-      height: 100%;
-      flex: 0 0 50%;
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      position: relative;
-
-      @include md {
-        flex: 0 0 90%;
-        gap: 0.5rem;
-      }
-
-      .filmstrip {
-        z-index: -1;
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 106%;
-        height: 100%;
-        left: -3%;
-        position: absolute;
-
-        &:before {
-          content: "";
-          background: -moz-linear-gradient(
-              top,
-              black 10px,
-              rgba(0, 0, 0, 0) 10px
-            ),
-            -moz-linear-gradient(left, black 10px, rgba(0, 0, 0, 0) 10px);
-          background: -webkit-linear-gradient(
-              top,
-              black 10px,
-              rgba(0, 0, 0, 0) 10px
-            ),
-            -webkit-linear-gradient(left, black 10px, rgba(0, 0, 0, 0) 10px);
-          background-size: 100% 30px;
-          background-repeat: repeat-y;
-          height: 100%;
-          width: 30px;
-          display: block;
-          position: absolute;
-          left: -30px;
-          opacity: 0.7;
-
-          @include md {
-            background-size: 100% 20px;
-            width: 20px;
-            left: -20px;
-          }
-        }
-
-        &:after {
-          content: "";
-          background: -moz-linear-gradient(
-              top,
-              black 10px,
-              rgba(0, 0, 0, 0) 10px
-            ),
-            -moz-linear-gradient(right, black 10px, rgba(0, 0, 0, 0) 10px);
-          background: -webkit-linear-gradient(
-              top,
-              black 10px,
-              rgba(0, 0, 0, 0) 10px
-            ),
-            -webkit-linear-gradient(right, black 10px, rgba(0, 0, 0, 0) 10px);
-          background-size: 100% 30px;
-          background-repeat: repeat-y;
-          height: 100%;
-          width: 30px;
-          display: block;
-          position: absolute;
-          right: -30px;
-          opacity: 0.7;
-
-          @include md {
-            background-size: 100% 20px;
-            width: 20px;
-            right: -20px;
-          }
-        }
-      }
+      gap: 1rem;
+      height: 80vh;
     }
 
     &__stripe_image {
-      background-color: var(--beige-color);
+      background-color: var(--secondary-color);
       border-radius: 1rem;
       height: 80%;
+      flex: 0 0 50%;
       position: relative;
       cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      transition: transform 1s ease-in-out, opacity 1.5s ease-in-out,
+        scale 0.3s ease-in-out;
 
       &:hover {
         scale: 1.015;
-        filter: none;
-      }
-
-      @include xl {
-        filter: none;
       }
 
       @include md {
         flex: 0 0 60%;
+        width: 100%;
       }
     }
 
     .stripe__description {
       display: none;
-      color: var(--beige-color);
+      color: var(--secondary-color);
       font-size: clamp(0.8rem, 2vw, 1.5rem);
+
       @include md {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
       }
 
       @include lg {
@@ -137,7 +52,7 @@
       }
 
       @include xs {
-        flex: 0 0 30%;
+        flex: 0 0 20%;
         justify-content: space-between;
       }
 
@@ -182,17 +97,6 @@
         display: flex;
         justify-content: space-between;
         gap: 5px;
-
-        a {
-          font-size: clamp(1rem, 2vw, 1.3rem);
-          text-transform: uppercase;
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            color: var(--hover-color);
-
-            scale: 1.1;
-          }
-        }
       }
     }
   }

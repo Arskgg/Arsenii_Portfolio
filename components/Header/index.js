@@ -7,12 +7,11 @@ import { ThemeContext } from "../MainContainer";
 import { images } from "../../assets/images";
 import ContactBtns from "../ContactBtns";
 import { motion } from "framer-motion";
-
-const Header = () => {
+const Header = ({ sectionRef }) => {
   const { darkTheme } = useContext(ThemeContext);
 
   return (
-    <header className={styles.header}>
+    <header ref={sectionRef} className={styles.header}>
       <div className={styles.container}>
         <Divider className={styles.top_divider} />
         <div className={styles.content}>

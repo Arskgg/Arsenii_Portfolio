@@ -5,37 +5,4 @@
   font-size: 1rem;
   color: var(--primary-color);
   gap: 1rem;
-
-  .btn {
-    height: 2rem;
-    border: 2px solid var(--secondary-color);
-    border-radius: 2rem;
-    background-color: var(--secondary-color);
-    line-height: 1rem;
-    transition: all 0.3s ease-in-out;
-    color: var(--primary-color);
-
-    @include xs {
-      font-size: 0.8rem;
-    }
-    @include xxs {
-      font-size: 0.7rem;
-    }
-
-    a {
-      padding: 0 1rem;
-      height: 100%;
-      display: flex;
-      align-items: center;
-
-      @include md {
-        padding: 0 0.5rem;
-      }
-    }
-
-    &:hover {
-      background-color: var(--secondary-color-color);
-      color: var(--secondary-color);
-    }
-  }
 }
