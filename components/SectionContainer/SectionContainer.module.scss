@@ -2,10 +2,6 @@
 
 .container {
   .title {
-    position: sticky;
-    top: 0;
-    padding-top: 0.1px;
-    z-index: 5;
     background-color: var(--primary-color);
     box-shadow: 0 30px 80px 50px var(--primary-color);
 
@@ -40,13 +36,8 @@
     }
   }
   .content_container {
-    flex: 1 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    @include xs {
-      margin-bottom: 0.5rem;
-    }
   }
 }

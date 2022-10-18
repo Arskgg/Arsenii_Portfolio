@@ -11,7 +11,7 @@ export const ThemeContext = createContext();
 
 const MainContainer = ({ children, project, sectionRefs }) => {
   const { darkTheme, changeTheme } = useTheme();
-  const { section, scrollOnClickMenueItem } = useScroll();
+  const { scrollOnClickMenueItem } = useScroll();
 
   return (
     <div className={styles.container}>
@@ -24,7 +24,6 @@ const MainContainer = ({ children, project, sectionRefs }) => {
       <ThemeContext.Provider value={{ darkTheme, changeTheme }}>
         <NavBar
           project={project}
-          section={section}
           sectionRefs={sectionRefs}
           scrollOnClickMenueItem={scrollOnClickMenueItem}
         />

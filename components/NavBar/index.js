@@ -3,18 +3,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AnimatedTitle from "../AnimatedTitle";
-import { useEffect, useState } from "react";
 import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const NavBar = ({ section, scrollOnClickMenueItem, project, sectionRefs }) => {
+const NavBar = ({ scrollOnClickMenueItem, project, sectionRefs }) => {
   const menuItems = ["Home", "Projects", "About"];
-  // const [selectedMenuItem, setSelectedMenuItem] = useState(null);
-
-  // useEffect(() => {
-  //   setSelectedMenuItem(section);
-  // }, [section]);
 
   return (
     <nav className={styles.nav}>
@@ -49,9 +43,6 @@ const NavBar = ({ section, scrollOnClickMenueItem, project, sectionRefs }) => {
                   key={item}
                   className={styles.item}
                   onClick={() => scrollOnClickMenueItem(sectionRefs[i], i)}
-                  // className={`${styles.item} ${
-                  //   i === selectedMenuItem && styles.item__selected
-                  // }`}
                 >
                   {item}
                 </li>
