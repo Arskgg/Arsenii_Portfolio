@@ -101,18 +101,15 @@ body {
   }
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--primary-color);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--secondary-color);
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(111, 111, 111);
   scale: 1.1;
