@@ -12,7 +12,7 @@ const About = ({ sectionRef }) => {
   return (
     <section ref={sectionRef} className={styles.about}>
       <SectionContainer title="About">
-        <AboutItem title="Jorney">
+        <AboutItem title="Journey">
           Hello there. I’m Arsenii. <br />
           Originally from Ukraine, currently based in Chicago, IL, USA.
           <br />
@@ -21,7 +21,7 @@ const About = ({ sectionRef }) => {
           studying software engineering at university. During studying i have
           mastered mobile development on Android platform. After a few years,
           web development caught my attention, so right now i create Full Stack
-          Web application based on React js.
+          Web application based on React.js and Vue.js.
         </AboutItem>
 
         <AboutItem title="Skills" reverseAnimation skills>
@@ -35,7 +35,11 @@ const About = ({ sectionRef }) => {
                 <br />
                 Next.js
                 <br />
+                Vue.js
+                <br />
                 Redux/RTK
+                <br />
+                Pinia
                 <br />
                 HTML
                 <br />
@@ -92,12 +96,11 @@ const About = ({ sectionRef }) => {
 
         <AboutItem title="Hobbies" reverseAnimation>
           I am a very creative person, so my favorite hobby is everything
-          related to music and cinema, especially music production and movies
-          watching.
+          related to art, especially music production and movies watching.
         </AboutItem>
       </SectionContainer>
     </section>
   );
 };
-44;
+
 export default About;

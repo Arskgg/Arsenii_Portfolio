@@ -55,7 +55,7 @@ const Projects = ({ sectionRef }) => {
                 href="https://social-garage.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                text="Live Site"
+                text="Live Page"
               />
             </div>
           </div>
@@ -81,7 +81,7 @@ const Projects = ({ sectionRef }) => {
                 href="https://social-garage.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
-                text="Live Site"
+                text="Live Page"
               />
             </div>
           </div>

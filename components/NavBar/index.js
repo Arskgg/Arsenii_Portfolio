@@ -3,12 +3,14 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AnimatedTitle from "../AnimatedTitle";
+import useScroll from "../../hooks/useScroll";
 import ThemeSwitch from "../ThemeSwitch";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const NavBar = ({ scrollOnClickMenueItem, project, sectionRefs }) => {
+const NavBar = ({ project, sectionRefs }) => {
   const menuItems = ["Home", "Projects", "About"];
+  const { scrollOnClickMenueItem } = useScroll();
 
   return (
     <nav className={styles.nav}>
@@ -18,12 +20,11 @@ const NavBar = ({ scrollOnClickMenueItem, project, sectionRefs }) => {
             <AnimatedTitle
               className={styles.name}
               text="ARSENII PEREVERTAILO"
-              onClick={() =>
-                !project && scrollOnClickMenueItem(sectionRefs[0], 0)
-              }
+              onClick={() => !project && scrollOnClickMenueItem(sectionRefs[0])}
             />
           </a>
         </Link>
+        <ThemeSwitch navBar />
 
         <menu className={styles.menu}>
           <motion.ul

@@ -4,7 +4,7 @@ import Brightness3Icon from "@mui/icons-material/Brightness3";
 import { useContext } from "react";
 import { ThemeContext } from "../MainContainer";
 
-const ThemeSwitch = () => {
+const ThemeSwitch = ({ navBar }) => {
   const { darkTheme, changeTheme } = useContext(ThemeContext);
 
   const handleChangeTheme = () => {
@@ -13,7 +13,7 @@ const ThemeSwitch = () => {
 
   return (
     <div>
-      <label className={styles.switch}>
+      <label className={`${styles.switch} ${navBar && styles.switch_small}`}>
         <input
           type="checkbox"
           onChange={handleChangeTheme}

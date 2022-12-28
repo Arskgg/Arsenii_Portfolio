@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints.scss";
+
 .switch {
   position: relative;
   display: inline-block;
@@ -79,4 +81,57 @@ input:checked ~ .icon {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.switch_small {
+  width: 40px;
+  height: 23px;
+  display: none;
+  .slider:before {
+    height: 17px;
+    width: 17px;
+    bottom: 2.6px;
+  }
+
+  input:checked ~ .icon {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+  }
+
+  .slider.round {
+    border-radius: 22.6px;
+  }
+
+  svg {
+    font-size: 13px;
+    left: 6px;
+    top: calc(50% - 7px);
+    cursor: pointer;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
+  }
+}
+
+@include md {
+  .switch {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 3%;
+  }
+}
+
+@media (max-width: 300px) {
+  .switch {
+    display: block;
+    position: absolute;
+    transform: rotate(90deg);
+    top: calc(50% - 11.5px);
+    right: 0;
+  }
 }

@@ -1,6 +1,7 @@
 @import "../../styles/breakpoints.scss";
 
 .projects {
+  min-height: 100vh;
   .slider_item {
     width: 90%;
     height: 90vh;

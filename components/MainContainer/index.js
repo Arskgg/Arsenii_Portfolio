@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React, { createContext } from "react";
-import useScroll from "../../hooks/useScroll";
 import useTheme from "../../hooks/useTheme";
 import Footer from "../Footer";
 import NavBar from "../NavBar";
@@ -11,7 +10,6 @@ export const ThemeContext = createContext();
 
 const MainContainer = ({ children, project, sectionRefs }) => {
   const { darkTheme, changeTheme } = useTheme();
-  const { scrollOnClickMenueItem } = useScroll();
 
   return (
     <div className={styles.container}>
@@ -22,11 +20,7 @@ const MainContainer = ({ children, project, sectionRefs }) => {
       <Noise />
 
       <ThemeContext.Provider value={{ darkTheme, changeTheme }}>
-        <NavBar
-          project={project}
-          sectionRefs={sectionRefs}
-          scrollOnClickMenueItem={scrollOnClickMenueItem}
-        />
+        <NavBar project={project} sectionRefs={sectionRefs} />
 
         {children}
         <Footer />
