@@ -6,3 +6,14 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'public.metop.io',
+      },
+    ],
+  },
+}

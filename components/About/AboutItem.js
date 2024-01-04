@@ -25,8 +25,8 @@ const AboutItem = ({
   };
 
   return (
-    <div ref={ref} className={styles.slider_item}>
-      <div
+    <div className={styles.slider_item}>
+      <div ref={ref}
         className={styles.slider_item__title}
         style={
           reverseAnimation ? inViewAnimationFormRight : inViewAnimationFormLeft

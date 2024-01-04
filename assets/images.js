@@ -10,12 +10,13 @@ import garage_create from "./garage/garage_create.png";
 import garage_details_1 from "./garage/garage_details_1.png";
 import garage_details_2 from "./garage/garage_details_2.png";
 import garage_details_3 from "./garage/garage_details_3.png";
-
 import garage_home_phone from "./garage/phone_garage_home.png";
 import garage_auth_phone from "./garage/phone_garage_auth.png";
 import garage_profile_phone from "./garage/phone_garage_profile.png";
 import garage_create_phone from "./garage/phone_garage_create.png";
 import garage_details_phone from "./garage/phone_garage_details.png";
+import goalscope from "./goalscope.png"
+
 
 export const images = {
   community_dark,
@@ -35,4 +36,5 @@ export const images = {
   garage_profile_phone,
   garage_create_phone,
   garage_details_phone,
+  goalscope
 };

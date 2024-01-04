@@ -29,6 +29,7 @@ const Projects = ({ sectionRef }) => {
                   alt="Garage project"
                   layout="fill"
                   objectFit="contain"
+                  priority={true}
                 />
               </a>
             </Link>

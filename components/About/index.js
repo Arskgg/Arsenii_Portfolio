@@ -14,7 +14,7 @@ const About = ({ sectionRef }) => {
       <SectionContainer title="About">
         <AboutItem title="Journey">
           Hello there. I’m Arsenii. <br />
-          Originally from Ukraine, currently based in Chicago, IL, USA.
+          Currently based in Chicago, IL, USA.
           <br />
           <br />
           My journey into the world of programming began in 2017 when I started
@@ -72,9 +72,13 @@ const About = ({ sectionRef }) => {
         </AboutItem>
 
         <AboutItem title="Education" education>
-          {" "}
           <div className={styles.image}>
-            <a href="https://www.wit.edu.pl" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.wit.edu.pl"
+              target="_blank"
+              title="Open WIT academy in a new tab"
+              rel="noreferrer"
+            >
               <Image
                 src={darkTheme ? images.wit_logo_light : images.wit_logo_dark}
                 alt="Wit logo"
@@ -82,7 +86,12 @@ const About = ({ sectionRef }) => {
             </a>
           </div>
           <div className={styles.wit_link}>
-            <a href="https://www.wit.edu.pl" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.wit.edu.pl/en"
+              target="_blank"
+              title="Open WIT academy in a new tab"
+              rel="noreferrer"
+            >
               Warsaw school of Information Technology | Warsaw, Poland 🇵🇱
             </a>
           </div>

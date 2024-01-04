@@ -1,11 +1,11 @@
-const Divider = ({ ...props }) => {
+const Divider = ({ width, ...props }) => {
   return (
     <div
       {...props}
       style={{
         backgroundColor: "var(--secondary-color)",
         height: "1px",
-        width: "100%",
+        width: width? width : "100%",
       }}
     />
   );

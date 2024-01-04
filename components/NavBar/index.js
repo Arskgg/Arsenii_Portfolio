@@ -9,7 +9,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const NavBar = ({ project, sectionRefs }) => {
-  const menuItems = ["Home", "Projects", "About"];
+  const menuItems = ["Home", "Projects", "Experience", "About"];
   const { scrollOnClickMenueItem } = useScroll();
 
   return (
