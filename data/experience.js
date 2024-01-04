@@ -5,7 +5,7 @@ export default [
     title: "Metopio",
     description:
       "SaaS startup that helps explore places and populations, discover insights and plan meaningful actions",
-    img: "https://public.metop.io//srv/htdocs/wp-content/uploads/2023/02/metopio-logo.png",
+    img: images.metopio,
     link: "https://public.metop.io/",
     experience: [
       "Developing responsive websites and reusable components using Vue.js and Quasar framework",

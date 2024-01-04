@@ -15,7 +15,8 @@ import garage_auth_phone from "./garage/phone_garage_auth.png";
 import garage_profile_phone from "./garage/phone_garage_profile.png";
 import garage_create_phone from "./garage/phone_garage_create.png";
 import garage_details_phone from "./garage/phone_garage_details.png";
-import goalscope from "./goalscope.png"
+import goalscope from "./goalscope.png";
+import metopio from "./metopio-logo.png";
 
 
 export const images = {
@@ -36,5 +37,6 @@ export const images = {
   garage_profile_phone,
   garage_create_phone,
   garage_details_phone,
-  goalscope
+  goalscope,
+  metopio,
 };
