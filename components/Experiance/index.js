@@ -56,6 +56,7 @@ const Experience = ({ sectionRef }) => {
                       <a
                         href={company.link}
                         target="_blank"
+                        rel="noreferrer"
                         title="Open Metopio in a new tab"
                       >
                         <Image
